@@ -1,0 +1,546 @@
+@import url(./font.css);
+header {
+  z-index: 999;
+  position: fixed;
+  padding: 20px;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+header .header-wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-wrap a.logogo img {
+  display: block;
+  height: 100px;
+}
+header .header-wrap ul.header-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .header-wrap ul.header-menu li.liOne {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: auto;
+  height: 100px;
+  transition: display 0.3s;
+}
+header .header-wrap ul.header-menu li.liOne a.uBar {
+  position: relative;
+  padding: 40px 0;
+  margin: 0 36px;
+  transition: 0.3s;
+  font-size: 12px;
+  color: #222;
+  font-family: "Press Start 2P", cursive;
+  font-weight: normal;
+}
+header .header-wrap ul.header-menu li.liOne a.uBar:hover {
+  color: #fff;
+  transition: 0.3s;
+}
+header .header-wrap ul.header-menu li.liOne a.uBar:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: transparent;
+  bottom: 0;
+  left: 0;
+  transition: background-color 0.3s;
+}
+header .header-wrap ul.header-menu li.liOne a.uBar:hover:after {
+  background-color: #000;
+  transition: background-color 0.3s;
+}
+header .header-wrap ul.header-menu .proWa {
+  position: relative;
+}
+header .header-wrap ul.header-menu .proWa .proLi {
+  position: absolute;
+  width: 120%;
+  display: none;
+  top: 97px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -111;
+  opacity: 0;
+  transition: 0.3s;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 40px;
+}
+header .header-wrap ul.header-menu .proWa .proLi li {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+header .header-wrap ul.header-menu .proWa .proLi li:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  z-index: 22;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #189cf4;
+}
+header .header-wrap ul.header-menu .proWa .proLi li a {
+  z-index: 44;
+  padding: 20px 20px 20px 10px;
+  position: relative;
+  font-family: "Poppins", "Noto Sans KR", sans-serif;
+  color: #1B1B1B;
+  font-size: 14px;
+  display: block;
+  transition: 0.3s;
+  transform: translate(0px);
+  background-color: #fff;
+}
+header .header-wrap ul.header-menu .proWa .proLi li a:hover {
+  color: #189cf4;
+  transform: translateX(20px);
+}
+header .header-wrap ul.header-menu .proWa:hover .proLi {
+  display: block;
+  opacity: 1;
+  z-index: 33;
+}
+header .header-wrap ul.header-language li {
+  font-size: 14px;
+  display: none;
+  cursor: pointer;
+}
+header .header-wrap ul.header-language li img {
+  padding-left: 10px;
+  display: inline-block;
+}
+header .header-wrap ul.header-language li:nth-child(1) {
+  display: block;
+  background-color: #fff;
+  padding: 12px 25px;
+  border-radius: 25px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+main {
+  margin-top: 100px;
+  width: 100%;
+  padding: 60px 0;
+  background-image: url(../img/main/sec01_bg.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+main .mainWrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+main .mainWrap .mainText h1 {
+  font-size: 88px;
+  color: #1b1b1b;
+  font-weight: 600;
+}
+main .mainWrap .mainText h3 {
+  color: #2c2c2c;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 0;
+}
+main .mainWrap .mainText p {
+  font-size: 14px;
+  color: #555;
+}
+main .mainWrap label {
+  width: 30%;
+  height: 40px;
+  padding: 20px 20px 20px 40px;
+  background-color: #fff;
+  color: #aaa;
+  font-size: 19px;
+  border-radius: 60px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+main .mainWrap label input {
+  width: 70%;
+  border: none;
+  font-size: 19px;
+}
+main .mainWrap label input:focus {
+  outline: none;
+}
+main .mainWrap label button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+main .mainWrap label button img {
+  display: block;
+}
+
+.items {
+  width: 100%;
+  position: relative;
+}
+.items .itemWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.items .itemWrap .temLeft {
+  width: 20%;
+  top: 90px;
+  background-color: #dbeefc;
+  height: 100vh;
+  position: -webkit-sticky;
+  position: sticky;
+}
+.items .itemWrap .temLeft .stMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+.items .itemWrap .temLeft .stMenu .mNavi {
+  background-color: #fff;
+  border-radius: 16px;
+  width: calc(100% - 120px);
+  padding: 30px;
+  margin: 20px;
+}
+.items .itemWrap .temLeft .stMenu .mNavi h3 {
+  position: relative;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 10px;
+}
+.items .itemWrap .temLeft .stMenu .mNavi h3:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+}
+.items .itemWrap .temLeft .stMenu .mNavi .checkGong nav {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.items .itemWrap .temLeft .stMenu .mNavi .checkGong nav img:nth-child(1) {
+  display: block;
+}
+.items .itemWrap .temLeft .stMenu .mNavi .checkGong nav img:nth-child(2) {
+  display: none;
+}
+.items .itemWrap .temLeft .stMenu .mNavi .checkGong nav p {
+  width: 85%;
+  font-size: 16px;
+  color: #7f7f7f;
+  font-weight: 500;
+}
+.items .itemWrap .temLeft .stMenu .mNavi .checkGong .here img:nth-child(1) {
+  display: none;
+}
+.items .itemWrap .temLeft .stMenu .mNavi .checkGong .here img:nth-child(2) {
+  display: block;
+}
+.items .itemWrap .temLeft .stMenu .mNavi .checkGong .here p {
+  color: #1b1b1b;
+}
+.items .itemWrap .temRight {
+  width: 80%;
+  background-color: #f3f3f3;
+}
+.items .itemWrap .temRight .rWrap {
+  width: 1100px;
+  padding-left: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.items .itemWrap .temRight .rWrap .rBanner {
+  margin-top: 70px;
+  height: 205px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.items .itemWrap .temRight .rWrap .rBanner li {
+  height: 100%;
+  width: 45%;
+  position: absolute;
+  border-radius: 16px;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(1) {
+  background-color: #ff1382;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(1) nav {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(1) nav .grBox {
+  background: linear-gradient(to left, rgba(255, 19, 130, 0) 25%, rgba(255, 19, 130, 0.7) 35%, rgba(255, 19, 130, 0.8) 50%, rgb(255, 19, 130) 75%);
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(1) nav .grBox h4 {
+  padding: 30px 40px 20px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(1) nav .grBox p {
+  color: #fff;
+  padding: 0 40px 40px;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(1) nav:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 50%;
+  background-image: url(../img/project/bN01.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  z-index: 1;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(2) {
+  background-color: rgb(89, 229, 132);
+  margin-left: 52%;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(2) nav {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(2) nav .grBox {
+  background: linear-gradient(to left, rgba(255, 19, 130, 0) 25%, rgba(89, 229, 132, 0.7) 35%, rgba(89, 229, 132, 0.8) 50%, rgb(89, 229, 132) 75%);
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(2) nav .grBox h4 {
+  padding: 30px 40px 20px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(2) nav .grBox p {
+  color: #fff;
+  padding: 0 40px 40px;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(2) nav:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 50%;
+  background-image: url(../img/project/bN02.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  z-index: 1;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(3) {
+  background-color: #ff1382;
+  margin-left: 104%;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(3) nav {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(3) nav .grBox {
+  background: linear-gradient(to left, rgba(255, 19, 130, 0) 25%, rgba(255, 19, 130, 0.7) 35%, rgba(255, 19, 130, 0.8) 50%, rgb(255, 19, 130) 75%);
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(3) nav .grBox h4 {
+  padding: 30px 40px 20px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(3) nav .grBox p {
+  color: #fff;
+  padding: 0 40px 40px;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(3) nav:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 50%;
+  background-image: url(../img/project/bN03.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  z-index: 1;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(4) {
+  background-color: #ff1382;
+  margin-left: 156%;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(4) nav {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(4) nav .grBox {
+  background: linear-gradient(to left, rgba(255, 19, 130, 0) 25%, rgba(255, 19, 130, 0.7) 35%, rgba(255, 19, 130, 0.8) 50%, rgb(255, 19, 130) 75%);
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(4) nav .grBox h4 {
+  padding: 30px 40px 20px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(4) nav .grBox p {
+  color: #fff;
+  padding: 0 40px 40px;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(4) nav:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 50%;
+  background-image: url(../img/project/bN04.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  z-index: 1;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(5) {
+  background-color: #ff1382;
+  margin-left: 208%;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(5) nav {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(5) nav .grBox {
+  background: linear-gradient(to left, rgba(255, 19, 130, 0) 25%, rgba(255, 19, 130, 0.7) 35%, rgba(255, 19, 130, 0.8) 50%, rgb(255, 19, 130) 75%);
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(5) nav .grBox h4 {
+  padding: 30px 40px 20px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(5) nav .grBox p {
+  color: #fff;
+  padding: 0 40px 40px;
+}
+.items .itemWrap .temRight .rWrap .rBanner li:nth-child(5) nav:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 50%;
+  background-image: url(../img/project/bN05.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  z-index: 1;
+}
+.items .itemWrap .temRight .rWrap .rBanner li .grBox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 16px;
+  z-index: 4;
+}
+.items .itemWrap .temRight .rWrap .sero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 30px 0;
+}
+.items .itemWrap .temRight .rWrap .sero p {
+  font-size: 16px;
+  color: #1b1b1b;
+}
+.items .itemWrap .temRight .rWrap .sero .refresh img {
+  display: block;
+  cursor: pointer;
+}
+.items .itemWrap .temRight .rWrap .userCh {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.items .itemWrap .temRight .rWrap .userCh li {
+  margin: 10px;
+  padding: 10px;
+  width: calc(25% - 40px);
+  height: 350px;
+  border-radius: 16px;
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.items .itemWrap .temRight .rWrap .userCh li .chImg {
+  border-radius: 16px;
+  display: block;
+  width: 100%;
+}
+.items .itemWrap .temRight .rWrap .userCh li h3 {
+  padding: 10px;
+  color: #1b1b1b;
+  font-size: 15px;
+}
+.items .itemWrap .temRight .rWrap .userCh li .iconBtn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.items .itemWrap .temRight .rWrap .userCh li .iconBtn div {
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #eee;
+}
+.items .itemWrap .temRight .rWrap .userCh li .iconBtn div img {
+  height: 16px;
+  width: 16px;
+}/*# sourceMappingURL=story.css.map */
